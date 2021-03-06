@@ -86,7 +86,7 @@ function rtp_only_comment_count( $count, $post_id ) {
 	$comments		 = get_approved_comments( $post_id );
 	$comment_count	= 0;
 	foreach ( $comments as $comment ) {
-		if ( $comment->comment_type == '' ) {
+		if ( $comment->comment_type != '' ) {
 			$comment_count++;
 		}
 	}
